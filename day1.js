@@ -1,3 +1,18 @@
+function FirstAndLastNb(chaine){
+    let firstNb = 0;
+    let lastNb = 0;
+    for (let i = 0; i < chaine.length; i++) {
+        let char = chaine[i];
+        if (!isNaN(char)){
+            if (firstNb == 0){
+                firstNb = char;
+            }
+            lastNb = char;
+        }
+    }
+    return Number(firstNb + lastNb)
+}
+
 let text = `1six7396484
 1ninehgqtjprgnpkchxdkctzk
 sevenmpsmstdfivebtnjljnlnpjrkhhsninefour9
@@ -998,22 +1013,6 @@ one9xmhvzklmzffive1kcsixmnsbm2
 nine8foursnczninednds
 9sevensixrsrgmclkvthkgtxqtwovtlxfrdnllxvsghslh
 seven443six8three31`
-
-function FirstAndLastNb(chaine){
-    let firstNb = 0;
-    let lastNb = 0;
-    for (let i = 0; i < chaine.length; i++) {
-        let char = chaine[i];
-        if (!isNaN(char)){
-            if (firstNb == 0){
-                firstNb = char;
-            }
-            lastNb = char;
-        }
-    }
-    return Number(firstNb + lastNb)
-}
-
 let keys = text.split(`
 `)
 let result = 0
