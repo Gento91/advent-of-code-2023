@@ -153,11 +153,18 @@ for (let i = 0; i < lignes.length; i++){
     
     if (nombres) {
         nombres.forEach((nombre) => {
-            const taille = nombre.length
-            const index = ligne.indexOf(nombre, ordonnee - 1)
+            let taille = nombre.length
+            let index = ligne.indexOf(nombre, ordonnee - 1)
     
-            if (i != 0 && testerCaracteres(lignes[i-1].substr(index-1,taille+2)) || testerCaracteres(lignes[i].substr(index-1,taille+2)) || i < lignes.length - 1 && testerCaracteres(lignes[i+1].substr(index-1,taille+2))){
-                result += parseInt(nombre)
+            // Après avoir déclaré la variable index dans la boucle
+            if (index === 0) {
+                if (i != 0 && testerCaracteres(lignes[i-1].substr(index,taille+1)) || testerCaracteres(lignes[i].substr(index,taille+1)) || i < lignes.length - 1 && testerCaracteres(lignes[i+1].substr(index,taille+1))){
+                    result += parseInt(nombre)
+                }
+            } else {
+                if (i != 0 && testerCaracteres(lignes[i-1].substr(index-1,taille+2)) || testerCaracteres(lignes[i].substr(index-1,taille+2)) || i < lignes.length - 1 && testerCaracteres(lignes[i+1].substr(index-1,taille+2))){
+                    result += parseInt(nombre)
+                }
             }
     
             ordonnee = index + taille
