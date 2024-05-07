@@ -23,7 +23,7 @@ function isPossible(game){
 }
 
 
-text = `Game 1: 7 red, 14 blue; 2 blue, 3 red, 3 green; 4 green, 12 blue, 15 red; 3 green, 12 blue, 3 red; 11 red, 2 green
+const text = `Game 1: 7 red, 14 blue; 2 blue, 3 red, 3 green; 4 green, 12 blue, 15 red; 3 green, 12 blue, 3 red; 11 red, 2 green
 Game 2: 16 blue, 9 red, 5 green; 8 red; 8 blue, 5 green, 12 red; 11 blue, 8 green, 17 red
 Game 3: 8 green, 1 blue, 7 red; 12 red, 6 blue, 9 green; 2 blue, 1 red, 14 green; 9 green, 4 red; 2 red, 1 blue, 8 green
 Game 4: 1 blue, 3 green; 2 green, 1 blue, 1 red; 1 red, 3 green
@@ -123,8 +123,8 @@ Game 97: 5 blue, 9 green; 4 green, 4 blue; 4 red, 19 green; 2 red, 3 green; 19 g
 Game 98: 4 blue, 10 red, 8 green; 2 red, 3 green; 5 red, 4 blue, 10 green
 Game 99: 9 blue, 12 red; 9 blue, 11 red, 13 green; 9 blue, 1 red, 13 green; 4 blue, 12 green; 10 blue, 17 red, 8 green
 Game 100: 8 red, 3 green; 4 green, 1 blue, 15 red; 10 red, 8 green, 1 blue`
+const games = text.split("Game ")
 let result = 0
-games = text.split("Game ")
 games.forEach(game => {
     let [id, cubes] = game.split(': ')
     if (cubes){

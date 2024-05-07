@@ -1,8 +1,6 @@
-// Chaîne de caractères de 34 caractères
-let chaineComplete = "0123456789abcdefghijABCDEFGHIJ";
-
-// Extraction des 6 caractères à partir du 11ème caractère
-let chaineExtraite = chaineComplete.substr(0+2, 5+3);
-
-// Affichage du résultat
-console.log(chaineComplete + " " + chaineExtraite);
+let text = "Card   2: 90 12 98 56 22 99 73 46  1 28 | 52 77 32  8 81 41 53 22 28 46 48 27 98  1 94 12 99 72 84 90 92 73 24 63 56"
+if (text.split(" ").includes("")){
+    console.log('yes')
+} else {
+    console.log("no")
+}

@@ -13,7 +13,7 @@ function FirstAndLastNb(chaine){
     return Number(firstNb + lastNb)
 }
 
-let text = `1six7396484
+const text = `1six7396484
 1ninehgqtjprgnpkchxdkctzk
 sevenmpsmstdfivebtnjljnlnpjrkhhsninefour9
 pppmfmnfourtworxrqrfhbgx8vvxgrjzhvqmztltwo
@@ -1013,7 +1013,7 @@ one9xmhvzklmzffive1kcsixmnsbm2
 nine8foursnczninednds
 9sevensixrsrgmclkvthkgtxqtwovtlxfrdnllxvsghslh
 seven443six8three31`
-let keys = text.split(`
+const keys = text.split(`
 `)
 let result = 0
 
